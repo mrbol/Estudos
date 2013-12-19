@@ -16,4 +16,4 @@ Este exemplo é composto de 04 arquivos
 
 
 Visualizar o exemplo através Codio IDE WEB para Desenvolvimento Web Projetos
-<a href="http://bit.ly/1hZaLx7">Clique aqui</a>
+<a href="http://bit.ly/1hZaLx7" target="_blank">Clique aqui</a>
