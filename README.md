@@ -4,9 +4,9 @@ Estudos
 HTML 5 e CSS3
 
 
-##Visão geral da sintaxe para seletores CSS 3
+#######Visão geral da sintaxe para seletores CSS 3
 
-####Este exemplo é composto de 04 arquivos
+#######Este exemplo é composto de 04 arquivos
 
 - html - visulizar exemplo</li>
 
