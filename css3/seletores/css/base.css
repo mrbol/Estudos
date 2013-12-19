@@ -1,0 +1,203 @@
+/* Seletor Universal */
+ * {
+    color:#000000;
+}
+
+/* @annotation:Preparando o layout */
+
+ a, p {
+    display:block;
+}
+h3 {
+    font-size:12pt;
+    color:white;
+    padding:10px;
+    border:1px solid yellow;
+    background-color:red;
+    cursor:pointer;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px
+}
+footer {
+    color:#ffffff;
+    margin:20px auto;
+    width:580px;
+    font-size:10pt;
+    
+}
+img {
+    float:right;
+    width:30px;
+    height:30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+    margin:5px;
+    cursor:pointer;
+}
+div.desc-exemplo {
+    background-color:#fffccc;
+    border-bottom:1px solid black;
+    margin:10px auto;
+    width:580px;
+    clear:both;
+}
+div.desc-exemplo h4 {
+    border-bottom:1px dashed gray;
+}
+div.exemplo {
+    border-bottom:1px solid black;
+    margin:10px auto;
+    width:580px;
+    clear:both;
+}
+div.exemplo h4 {
+    border-bottom:1px dashed gray;
+}
+div.exemplo li:nth-child(even) {
+    list-style-type:none;
+    border:1px solid #CFCFCF;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding:5px 10px;
+    margin:10px;
+}
+
+div.exemplo li:nth-child(odd) {
+    list-style-type:none;
+    border:1px solid #E6E6E6;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding:5px 10px;
+    margin:10px;    
+}
+div.resultado {
+    margin:1em;
+    padding:0.5em;
+    border:1px dashed gray;
+}
+
+/* @annotation: AQUI COMEÇA OS EXEMPLOS */
+
+/* Seletor de Atributo */
+ div#atributo {
+    margin:10px auto;
+    width:600px;
+}
+/* E[att] */
+ div#atributo p[title] {
+    color:red;
+}
+/* @annotation: class especifica */
+ div#atributo p.dois {
+    color:green;
+}
+/* E[att="val"] */
+ div#atributo p[title="especifico"] {
+    color:blue;
+}
+/* @annotation:lang="pt" */
+ div#atributo p[lang="pt"] {
+    color:gray;
+}
+/* @annotation:E[att|="val"] */
+ div#atributo p[class|="dest"] {
+    color:red;
+}
+/* @annotation:E[att~="val"] */
+ div#atributo a {
+    display:block;
+}
+div#atributo a[rel~="copy"] {
+    color:pink;
+}
+/* @annotation:a[rel^="minimo"] */
+ div#atributo a[rel^="minimo"] {
+    color:green;
+}
+/* @annotation:a[rel$="imo"] */
+ div#atributo a[rel$="imo"] {
+    color:gray;
+}
+/* @annotation:a[rel$="imo"] */
+ div#atributo a[rel*="que"] {
+    color:red;
+}
+div#pseudoclass-link {
+    margin:10px auto;
+    width:600px;
+}
+div#pseudoclass-link :link {
+    color:blue;
+}
+div#pseudoclass-link :focus {
+    color:white;
+    background-color:red;
+}
+div#pseudoclass-link a:focus:visited {
+    color:green;
+}
+div#pseudoclass-link a:link {
+    color:red;
+    text-decoration:none;
+}
+div#pseudoclass-link a:visited {
+    color:lime;
+}
+div#pseudoclass-link a:hover {
+    color:gray;
+}
+div#pseudoclass-link p:hover {
+    color:green;
+}
+
+/* @annotation:Pseudoclasse estrutural */
+
+ div#pseudoclassse-estrutural {
+    margin:10px auto;
+    width:600px;
+}
+/* @annotation: E:nth-chid(n) - Seleciona um numero N de elemento filho*/
+
+/* @annotation:Aplica estilo na segunda linha */
+ div#pseudoclassse-estrutural tr:nth-child(2) {
+    background-color:red;
+}
+/* @annotation: Aplica o estio para todas linha impares*/
+ div#pseudoclassse-estrutural tr:nth-child(odd) {
+    background-color:#fffccc;
+}
+/* @annotation: Aplica o estio para todas linha pares*/
+ div#pseudoclassse-estrutural tr:nth-child(even) {
+    background-color:yellow;
+    color:red;
+}
+/* @annotation:Aplica a cada 3 linha */
+ div#pseudoclassse-estrutural tr:nth-child(3n+1) {
+    border:2px dashed blue;
+    height:30px;
+}
+/* @annotation:Conta de baixo para cima */
+ div#pseudoclassse-estrutural table.sel-ultimos-filhos tr:nt-last-child(odd) {
+    background-color:green;
+}
+/* @annotation: E:nth-of-type(n) - Selecione um numero N de elemento do mesmo tipo*/
+ div#pseudoclassse-estrutural div.irmao-mesmo-tipo > p:nth-child(3) {
+    color:red;
+}
+/* @annotation: A cada 2 elementos P é aplicado o estilo  */
+ div#pseudoclassse-estrutural div.irmao-mesmo-tipo > p:nth-of-type(2n+1) {
+    color:blue;
+}
+/* @annotation:E::first-line - Primeira linha de um elemento E */
+ div#pseudoclassse-estrutural div.primeiro-filho > p:first-child {
+    color:blue;
+}
+/* @annotation:E::E:last-child - O ultimo elemento filho */
+ div#pseudoclassse-estrutural div.ultimo-filho > p:last-child {
+    color:blue;
+}

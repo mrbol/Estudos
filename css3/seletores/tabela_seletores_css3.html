@@ -1,0 +1,941 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Waldiney Romero - Seletores CSS3</title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+
+    <!-- @annotation: SyntaxHighlighter  
+    
+     O que é Syntax Highlighter
+     O Syntax Highlighter é uma ferramenta em javascript[bb] que permite 
+     que você ajude seus usuários a entenderem códigos publicados em seu blog ou site, 
+     ideal para quem quer compartilhar programações ou exemplificar e explicar alguns códigos.
+    
+     http://alexgorbatchev.com/SyntaxHighlighter/
+    -->
+    <script type="text/javascript" src="bower_components/SyntaxHighlighter/scripts/XRegExp.js"></script>
+    <!-- XRegExp is bundled with the final shCore.js during build -->
+    <script type="text/javascript" src="bower_components/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script type="text/javascript" src="bower_components/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="bower_components/SyntaxHighlighter/scripts/shBrushCss.js"></script>
+    <link type="text/css" rel="stylesheet" href="bower_components/SyntaxHighlighter/styles/shCore.css" />
+    <link type="text/css" rel="Stylesheet" href="bower_components/SyntaxHighlighter/styles/shThemeDefault.css" />
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+
+    <!-- @annotation: JQuery 
+    
+    JQuery é uma biblioteca JavaScript rápida, pequena e rica em recursos. Isso torna as coisas como travessia 
+    documento HTML e manipulação, manipulação de eventos, animação e Ajax muito mais simples com uma API fácil de 
+    usar, que funciona através de uma infinidade de navegadores. Com uma combinação de versatilidade e capacidade de 
+    expansão, jQuery mudou a maneira que milhões de pessoas escrever JavaScript.
+
+    http://jquery.com/
+    -->
+    <script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+    <script type="text/javascript" src="js/base.js">
+    </script>
+
+</head>
+
+<body>
+
+    <div class="desc-exemplo">
+        <h4>
+            Este exemplo é composto de 04 arquivos
+        </h4>
+        <ul>
+            <li>html - visulizar exemplo</li>
+            <li>css - utilização dos seletores css3</li>
+            <li>js - utilização de JQUERY</li>
+            <li>arquivo de anotações .md</li>
+        </ul>
+    </div>
+
+    <div id="atributo">
+        <header>
+            <h2>
+                Exemplo de Seletores CSS3 
+            </h2>
+        </header>
+
+        <!-- @annotation:Seletor Atributo -->
+        <section>
+
+            <img src="img/seta-vermelha-baixo.png">
+
+            <h3>
+                Seletor de Atributo
+            </h3>
+            <!-- @annotation: E[att="val"] -->
+            <div class="exemplo">
+
+                <h4>
+                    Exemplo E[att="val"]
+                </h4>
+                <ul>
+                    <li>
+                        <div>
+                            <h5>
+                                Primeiro exemplo                     
+                            </h5>
+
+                            <!-- @annotation: CSS-->
+                            <h6>CSS</h6>
+
+                            <pre class="brush:css">
+                                div#atributo p[title]{color:red;}
+                            </pre>
+
+                            <!-- @annotation:HTML-->
+                            <h6>HTML</h6>
+
+                            <pre class="brush:javascript">
+                                <p title="primeiro">
+                                    p[title] - Elemento "P" com attributo "title"
+                                </p>
+                            </pre>
+
+                            <h6>
+                                Resultado
+                            </h6>
+
+                            <div class="resultado">
+                                <p title="primeiro">
+                                    p[title] - Elemento "P" com attributo "title"
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h5>
+                                Segundo exemplo                     
+                            </h5>
+
+                            <!-- @annotation: CSS-->
+                            <h6>CSS</h6>
+
+                            <pre class="brush:css">
+                                /* @annotation: class especifica */
+                                div#atributo p.dois {color:green;}  
+                            </pre>
+
+                            <!-- @annotation: HTML-->
+                            <h6>HTML</h6>
+
+                            <pre class="brush:css">
+                                <p class="dois">
+                                    p.dois - Elemento "P" com classname igual "dois" sendo assim com estilo de cor Amarelo
+                                </p>
+                            </pre>
+
+                            <h6>
+                                Resultado
+                            </h6>
+
+                            <div class="resultado">
+                                <p class="dois">
+                                    p.dois - Elemento "P" com classname igual "dois" sendo assim com estilo de cor ESPECIFICA
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h5>
+                                Terceiro exemplo                     
+                            </h5>
+
+                            <!-- @annotation: CSS-->
+                            <h6>CSS</h6>
+
+                            <pre class="brush:css">
+                                /* E[att="val"] */
+                                div#atributo p[title="especifico"]{color:blue;}
+                            </pre>
+
+                            <!-- @annotation: HTML-->
+                            <h6>HTML</h6>
+
+                            <pre class="brush:css">
+                                <p title="especifico">
+                                    p[title="especifico"]{color:blue;} - Elemento "P" com atributo "TITLE" com valor "especifico"
+                                </p>
+                            </pre>
+
+                            <!-- @annotation: RESULTADO-->
+                            <h6>RESULTADO</h6>
+
+                            <div class="resultado">
+                                <p title="especifico">
+                                    p[title="especifico"]{color:blue;} - Elemento "P" com atributo "TITLE" com valor "especifico"
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h5>
+                                Quarto exemplo                     
+                            </h5>
+
+                            <!-- @annotation: CSS-->
+                            <h6>CSS</h6>
+
+                            <pre class="brush:css">
+                                /* @annotation:lang="pt" */
+                                 div#atributo p[lang="pt"] {
+                                    color:gray;
+                                }
+                            </pre>
+
+                            <!-- @annotation: HTML-->
+                            <h6>HTML</h6>
+
+                            <pre class="brush:javascript">
+                                <p lang="pt">
+                                    p[lang="pt"] - Elemento P cujo valor do atributo "lang" é "pt"
+                                </p>
+                            </pre>
+
+                            <!-- @annotation: RESULTADO-->
+                            <h6>RESULTADO</h6>
+
+                            <div class="resultado">
+                                <p lang="pt">
+                                    p[lang="pt"] - Elemento P cujo valor do atributo "lang" é "pt"
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- @annotation:E[att|="val"] -->
+            <div class="exemplo">
+                <h4>
+                     Exemplo E[att|="val"] - Seleciona o elemento aonde valor do atributo seja igual ou comece com a string val
+                </h4>
+
+                <ul>
+                    <li>
+                        <div>
+                            <h5>
+                                exemplo                     
+                            </h5>
+
+                            <!-- @annotation: CSS-->
+                            <h6>CSS</h6>
+
+                            <pre class="brush:css">
+                                /* @annotation:E[att|="val"] */
+                                div#atributo p[class|="dest"] {color:red;}
+                            </pre>
+
+                            <!-- @annotation: HTML -->
+                            <h6>HTML</h6>
+
+                            <pre class="brush:javascript">
+                                <p class="dest-um">
+                                    Estilo aplicado
+                                </p>
+                                <p class="dest_dois">
+                                    Estilo não aplicado
+                                </p>
+                                <p class="dest">
+                                    Estilo aplicado
+                                </p>
+                            </pre> 
+
+                            <!-- @annotation: RESULTADO-->
+                            <h6>RESULTADO</h6>
+
+                            <div class="resultado">
+                                <p class="dest-um">
+                                    Estilo aplicado
+                                </p>
+                                <p class="dest_dois">
+                                    Estilo não aplicado
+                                </p>
+                                <p class="dest">
+                                    Estilo aplicado
+                                </p>
+                            </div>
+
+                        </div>
+                </ul>
+
+
+            </div>
+
+            <!-- @annotation:E[att~="val"] -->
+            <div class="exemplo">
+                <h4>
+                    Exemplo E[att~="val"] - Contenha a palava 
+                </h4>
+                <ul>
+                    <div>
+                        <h5>
+                            exemplo                     
+                        </h5>
+
+                        <!-- @annotation: CSS-->
+                        <h6>CSS</h6>
+
+                        <pre class="brush:css">                           
+                             div#atributo a {
+                                display:block;
+                            }
+
+                            /* @annotation:E[att~="val"] - Contenha a palava */
+
+                            div#atributo a[rel~="copy"] {
+                                color:pink;
+                            }
+
+                        </pre>
+
+                        <!-- @annotation: HTML -->
+                        <h6>HTML</h6>
+
+                        <pre class="brush:javascript">
+                            <a rel="copy right teste">Estilo aplicado</a>
+                            <a rel="copyeditor">Estilo não aplicado</a>
+                            <a rel="copy">Estilo aplicado</a>
+                        </pre>
+
+                        <!-- @annotation: RESULTADO-->
+                        <h6>RESULTADO</h6>
+
+                        <div class="resultado">
+                            <a rel="copy right teste">Estilo aplicado</a>
+                            <a rel="copyeditor">Estilo não aplicado</a>
+                            <a rel="copy">Estilo aplicado</a>
+                        </div>
+
+                    </div>
+
+                </ul>
+            </div>
+
+            <!-- @annotation:E[att^="val"] -->
+            <div class="exemplo">
+                <h4>
+                    Exemplo E[att^="val"] - Elemento E cujo valor do atributo "foo" começa com a string "bar"
+                </h4>
+                <ul>
+                    <div>
+                        <h5>
+                            exemplo                     
+                        </h5>
+
+                        <!-- @annotation: CSS-->
+                        <h6>CSS</h6>
+
+                        <pre class="brush:css"> 
+
+                            /* @annotation:a[rel$="imo"] - Valor do atributo "rel" termina com a string "imo" */
+                             div#atributo a[rel$="imo"] {
+                                color:gray;
+                            }
+
+                            /* @annotation:a[rel^="minimo"] - Valor do atributo "rel" começa com a string "minimo" */
+                             div#atributo a[rel^="minimo"] {
+                                color:green;
+                            }
+                        </pre>
+
+                        <!-- @annotation: HTML -->
+                        <h6>HTML</h6>
+
+                        <pre class="brush:javascript">
+                            <a rel="minimo">Estilo aplicado(termina com imo sendo assim cinza)</a>
+                            <a rel="minieditor">Estilo não aplicado</a>
+                            <a rel="minimo editor">Estilo aplicado</a>
+                        </pre>
+
+                        <!-- @annotation: RESULTADO-->
+                        <h6>RESULTADO</h6>
+
+                        <div class="resultado">
+                            <a rel="minimo">Estilo aplicado(termina com imo sendo assim cinza)</a>
+                            <a rel="minieditor">Estilo não aplicado</a>
+                            <a rel="minimo editor">Estilo aplicado</a> 
+                        </div>
+
+                    </div>
+                </ul>
+            </div>
+            <div class="exemplo">
+                <h4>
+                    E[foo$="bar"] - Elemento E cujo valor do atributo "foo" termina com a string "bar"
+                </h4>
+                <ul>
+                    <div>
+                        <h5>
+                            exemplo                     
+                        </h5>
+
+                        <!-- @annotation: CSS-->
+                        <h6>CSS</h6>
+
+                        <pre class="brush:css"> 
+                            div#atributo a[rel$="imo"] {
+                                color:gray;
+                            }
+			            </pre>
+                        <!-- @annotation: HTML -->
+                        <h6>HTML</h6>
+
+                        <pre class="brush:javascript">
+                            <a rel="maximo">Estilo aplicado</a>
+                            <a rel="mimos">Estilo não aplicado</a>
+                            <a rel="primo">Estilo aplicado</a>                           
+                        </pre>
+
+                        <!-- @annotation: RESULTADO-->
+                        <h6>RESULTADO</h6>
+
+                        <div class="resultado">
+                            <a rel="maximo">Estilo aplicado</a>
+                            <a rel="mimos">Estilo não aplicado</a>
+                            <a rel="primo">Estilo aplicado</a> 
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="exemplo">
+                <h4>
+                    E[foo*="bar"] - Elemento E cujo valor do atibuto "foo" contém a substring "bar"
+                </h4>
+                <ul>
+                    <div>
+                        <h5>
+                            exemplo                     
+                        </h5>
+
+                        <!-- @annotation: CSS-->
+                        <h6>CSS</h6>
+
+                        <pre class="brush:css"> 
+                             div#atributo a[rel*="que"] {
+                                color:red;
+                            }
+
+			            </pre>
+                        <!-- @annotation: HTML -->
+                        <h6>HTML</h6>
+
+                        <pre class="brush:javascript">
+                            <a rel="queijo">queijo</a>
+                            <a rel="qualquer">qualquer</a>
+                            <a rel="martelo de qualquer">martelo</a>
+                        </pre>
+
+                        <!-- @annotation: RESULTADO-->
+                        <h6>RESULTADO</h6>
+
+                        <div class="resultado">
+                            <a rel="queijo">queijo</a>
+                            <a rel="qualquer">qualquer</a>
+                            <a rel="martelo de qualquer">martelo</a>
+
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+
+        </section>
+    </div>
+
+    <div id="pseudoclass-link">
+        <section>
+            <img src="img/seta-vermelha-baixo.png">
+            <h3>
+                Pseudoclasse link 
+            </h3>
+
+            <div class="exemplo">
+                <h4>
+                    Exemplo
+                </h4>
+                <ul>
+                    <div>
+                        <h5>
+                            exemplo                     
+                        </h5>
+
+                        <!-- @annotation: CSS-->
+                        <h6>CSS</h6>
+
+                        <pre class="brush:css"> 
+
+                            div#pseudoclass-link {
+                                margin:10px auto;
+                                width:600px;
+                            }
+                            div#pseudoclass-link :link {
+                                color:blue;
+                            }
+                            div#pseudoclass-link :focus {
+                                color:white;
+                                background-color:red;
+                            }
+                            div#pseudoclass-link a:focus:visited {
+                                color:green;
+                            }
+                            div#pseudoclass-link a:link {
+                                color:red;
+                                text-decoration:none;
+                            }
+                            div#pseudoclass-link a:visited {
+                                color:lime;
+                            }
+                            div#pseudoclass-link a:hover {
+                                color:gray;
+                            }
+                            div#pseudoclass-link p:hover {
+                                color:green;
+                            }
+
+			            </pre>
+
+                        <!-- @annotation: HTML -->
+                        <h6>HTML</h6>
+
+                        <pre class="brush:javascript">
+                            <a href="http://www.google.com.br" target="_blank">google</a>
+                            <a href="http://www.tableless.com.br" target="_blank">tableless</a>
+                            <a href="http://www.globo.com" target="_blank">globo.com</a>
+                            <p>
+                                Exemplos de hyperlink
+                            </p>
+
+                        </pre>
+
+                        <!-- @annotation: RESULTADO-->
+                        <h6>RESULTADO</h6>
+
+                        <div class="resultado">
+                            <a href="http://www.google.com.br" target="_blank">google</a>
+                            <a href="http://www.tableless.com.br" target="_blank">tableless</a>
+                            <a href="http://www.globo.com" target="_blank">globo.com</a>
+                            <p>
+                                Exemplos de hyperlink
+                            </p>
+
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div id="pseudoclassse-estrutural">
+        <img src="img/seta-vermelha-baixo.png">
+        <h3>
+            Pseudoclassse Estrutural
+        </h3>
+        <div class="exemplo">
+            <h4>
+                nth-child - Veja anotações no arquivo base.css
+            </h4>
+            <ul>
+                <div>
+                    <h5>
+                        exemplo                     
+                    </h5>
+
+                    <!-- @annotation: CSS-->
+                    <h6>CSS</h6>
+
+                    <pre class="brush:css"> 
+                        /* @annotation:Aplica estilo na segunda linha */
+                         div#pseudoclassse-estrutural tr:nth-child(2) {
+                            background-color:red;
+                        }
+                        /* @annotation: Aplica o estio para todas linha impares*/
+                         div#pseudoclassse-estrutural tr:nth-child(odd) {
+                            background-color:#fffccc;
+                        }
+                        /* @annotation: Aplica o estio para todas linha pares*/
+                         div#pseudoclassse-estrutural tr:nth-child(even) {
+                            background-color:yellow;
+                            color:red;
+                        }
+                        /* @annotation:Aplica a cada 3 linha */
+                         div#pseudoclassse-estrutural tr:nth-child(3n+1) {
+                            border:2px dashed blue;
+                            height:30px;
+                        }
+
+			        </pre>
+                    <!-- @annotation: HTML -->
+                    <h6>HTML</h6>
+
+                    <pre class="brush:javascript">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                            </tbody>
+            
+                        </table>
+                    </pre>
+
+                    <!-- @annotation: RESULTADO-->
+                    <h6>RESULTADO</h6>
+
+                    <div class="resultado">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </ul>
+
+        </div>
+
+        <div class="exemplo">
+            <h4>
+                E:last-chid(n) - Seleciona um numero N de elemento filho a partir do ultimo filho(debaixo para cima)
+            </h4>
+            <ul>
+                <div>
+                    <h5>
+                        exemplo                     
+                    </h5>
+
+                    <!-- @annotation: CSS-->
+                    <h6>CSS</h6>
+
+                    <pre class="brush:css"> 
+                        /* @annotation:Conta de baixo para cima */
+                         div#pseudoclassse-estrutural table.sel-ultimos-filhos tr:nt-last-child(2n+1) {
+                            background-color:green;
+                        }
+                    </pre>
+                    
+                    <!-- @annotation: HTML -->
+                    <h6>HTML</h6>
+
+                    <pre class="brush:javascript">
+                        <table class="sel-ultimos-filhos">
+                            <tbody>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+
+                            </tbody>           
+                        </table>
+                    </pre>
+
+                    <!-- @annotation: RESULTADO-->
+                    <h6>RESULTADO</h6>
+
+                    <div class="resultado">
+                        <table class="sel-ultimos-filhos">
+                            <tbody>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+            
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                <tr>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                    <td>exemplo</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>                        
+                    </div>
+                </div>
+            </ul>
+            
+        </div>
+        <div class="exemplo">
+            <h4>
+                E:nth-of-type(n) - Selecione um numero N de elemento do mesmo tipo
+            </h4>
+            <div class="irmao-mesmo-tipo">
+                <h5>
+                    Cabeçaho 1
+                </h5>
+                <p>
+                    Paragrafo 1 <span>texto em span</span>
+                </p>
+                <p>
+                    Paragrafo 2
+                </p>
+                <p>
+                    Paragrafo 3
+                </p>
+                <h5>
+                    Cabeçalho 2
+                </h5>
+                <p>
+                    Paragrafo 1 <span>texto em span</span>
+                </p>
+                <p>
+                    Paragrafo 2
+                </p>
+                <p>
+                    Paragrafo 3
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="exemplo">
+            <h4>
+                E:nth-last-of-type(n) - Funciona da mesma maneira que nt-of-type com uma unica diferença. O estilo é aplicado de baixo para cima
+            </h4>
+        </div>
+
+        <div class="exemplo">
+            <h4>
+                E::first-line - Primeira linha de um elemento E
+            </h4>
+            <div class="primeiro-filho">
+                <p>
+                    Primeiro Parágrafo
+                </p>
+                <span>Span</span>
+                <p>
+                    Segundo Parágrafo
+                </p>
+                <p>
+                    Terceiro Parágrafo
+                </p>
+            </div>
+        </div>
+
+        <div class="exemplo">
+            <h4>
+                E:last-child - O ultimo elemento filho
+            </h4>
+            <div class="ultimo-filho">
+                <p>
+                    Primeiro Parágrafo
+                </p>
+                <span>Span</span>
+                <p>
+                    Segundo Parágrafo
+                </p>
+                <p>
+                    Terceiro Parágrafo
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Visualizar o exemplo através Codio IDE WEB para Desenvolvimento Web Projetos
+        </p>
+        <p>
+            <a href="http://bit.ly/1hZaLx7">Clique aqui</a>
+        </p>
+    </footer>
+</body>
+
+</html>
+
+
