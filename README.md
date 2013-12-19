@@ -16,4 +16,4 @@ Este exemplo é composto de 04 arquivos
 
 
 Visualizar o exemplo através Codio IDE WEB para Desenvolvimento Web Projetos
-<a href="http://bit.ly/1ern4ln"><img src="https://codio-public.s3.amazonaws.com/sharing/open-in-ide.png" width="95" height="19" alt="Show me the Code at Codio" target="_blank"></a>
+<a href="http://bit.ly/1ern4ln" target="_blank"><img src="https://codio-public.s3.amazonaws.com/sharing/open-in-ide.png" width="95" height="19" alt="Show me the Code at Codio" ></a>
