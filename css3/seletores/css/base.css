@@ -2,9 +2,7 @@
  * {
     color:#000000;
 }
-
 /* @annotation:Preparando o layout */
-
  a, p {
     display:block;
 }
@@ -24,7 +22,6 @@ footer {
     margin:20px auto;
     width:580px;
     font-size:10pt;
-    
 }
 img {
     float:right;
@@ -65,7 +62,6 @@ div.exemplo li:nth-child(even) {
     padding:5px 10px;
     margin:10px;
 }
-
 div.exemplo li:nth-child(odd) {
     list-style-type:none;
     border:1px solid #E6E6E6;
@@ -73,15 +69,14 @@ div.exemplo li:nth-child(odd) {
     -moz-border-radius: 20px;
     border-radius: 20px;
     padding:5px 10px;
-    margin:10px;    
+    margin:10px;
 }
 div.resultado {
     margin:1em;
     padding:0.5em;
     border:1px dashed gray;
 }
-
-/* @annotation: AQUI COMEÃ‡A OS EXEMPLOS */
+/* @annotation: AQUI COMEÇA OS EXEMPLOS */
 
 /* Seletor de Atributo */
  div#atributo {
@@ -154,9 +149,7 @@ div#pseudoclass-link a:hover {
 div#pseudoclass-link p:hover {
     color:green;
 }
-
 /* @annotation:Pseudoclasse estrutural */
-
  div#pseudoclassse-estrutural {
     margin:10px auto;
     width:600px;
@@ -189,7 +182,7 @@ div#pseudoclass-link p:hover {
  div#pseudoclassse-estrutural div.irmao-mesmo-tipo > p:nth-child(3) {
     color:red;
 }
-/* @annotation: A cada 2 elementos P Ã© aplicado o estilo  */
+/* @annotation: A cada 2 elementos P é aplicado o estilo  */
  div#pseudoclassse-estrutural div.irmao-mesmo-tipo > p:nth-of-type(2n+1) {
     color:blue;
 }
@@ -201,3 +194,75 @@ div#pseudoclass-link p:hover {
  div#pseudoclassse-estrutural div.ultimo-filho > p:last-child {
     color:blue;
 }
+@media screen and (max-width: 760px) and (min-width: 400px) {
+    
+    body{width:100%px;font-size:70%;}    
+    
+    div#atributo,div#pseudoclass-link,div#pseudoclassse-estrutural {
+        margin:10px auto;
+        width:100%!important;
+    }  
+    
+    img {margin:8px 60px;width:25px;height:25px;}
+    
+    h2,h4{
+        width:82%;
+    } 
+    h3,header,div.desc-exemplo {
+        width:82%;
+        margin:10px auto;
+    }
+    
+    div.exemplo {
+        border-bottom:1px solid black;
+        margin:10px auto;
+        width:82%!important;
+        clear:both;
+    }
+    
+    footer {width:82%;margin:10px auto;}  
+    
+    div.exemplo ul {margin:0px; padding:5px;}    
+    div.exemplo li {margin:0px; padding:5px;}    
+   
+}
+@media screen and (max-width: 400px) {
+    
+    body{width:100%px;font-size:70%;}
+    
+    img {margin:8px 15px;width:20px;height:20px;}
+    
+    div#atributo,div#pseudoclass-link,div#pseudoclassse-estrutural {
+        margin:10px auto;
+        width:100%!important;
+    }    
+       
+    header,footer{
+        width:90%!important;
+        margin:10px auto;       
+    }
+    
+    h2{
+        font-size:90%;
+        width:90%;
+    } 
+    
+    h3,h4 {font-size:90%;
+        width:90%!important;
+        margin:10px auto;                     
+    }
+    
+    div.desc-exemplo {
+        width:90%!important;
+        margin:10px auto;       
+    }
+    div.exemplo {
+        border-bottom:1px solid black;
+        margin:10px auto;
+        width:90%!important;
+        clear:both;
+    }
+    
+    div.exemplo ul {margin:0px; padding:0px;}    
+    div.exemplo li {margin:0px; padding:0px;}    
+}   
