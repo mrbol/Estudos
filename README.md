@@ -33,8 +33,11 @@ E[foo~="bar"] - Elemento E cujo valor do atributo "foo" é exatamente "bar" ou c
 #### Seletor de Atributo - Seletor para sub string de atributo
 
 E[foo^="bar"] - Elemento E cujo valor do atributo "foo" começa com a string "bar"
+
 E[foo$="bar"] - Elemento E cujo valor do atributo "foo" termina com a string "bar"
+
 E[foo*="bar"] - Elemento E cujo valor do atibuto "foo" contém a substring "bar"
+
 E[foo|="val"] - Elemento E cujo valor do atributo "foo" é exatamente "bar" ou começa com "val"
 
 #### Pseudoclasse estrutural
