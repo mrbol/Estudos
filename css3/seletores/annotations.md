@@ -69,7 +69,7 @@ E:checked 	Elemento E de interface de usuário (um controle de formulário) que 
 
 E::selection Elemento E que tenha sido selecionado ou destacado pelo usuário.
 
-####Pseudoelemento
+#### Pseudoelemento
 
 E::first-line - Primeira linha de um elemento E
 
@@ -79,7 +79,7 @@ E::before - Conteudo gerado para ser posicionado antes do elemento E
 
 E:after - Conteudo gerado para ser posiconado depois do elemento E
 
-####Pseudo classe negação 
+#### Pseudo classe negação 
 
 E:not(s) Elemento E que não case com o seletor simples s.
 
