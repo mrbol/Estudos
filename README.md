@@ -1,4 +1,4 @@
-## Estudos - HTML 5 e CSS3
+# Estudos - HTML 5 e CSS3
 
 
 #### Visão geral da sintaxe para seletores CSS 3
